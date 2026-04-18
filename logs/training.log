@@ -1,0 +1,980 @@
+2026-03-24T00:41:39Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:41:39Z | INFO     |        __main__ | Starting all experiments
+2026-03-24T00:41:39Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:41:39Z | INFO     |        __main__ | 
+2026-03-24T00:41:39Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:41:39Z | INFO     |        __main__ | main Summary
+2026-03-24T00:41:39Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:41:39Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     |        __main__ | Starting all experiments
+2026-03-24T00:42:02Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-03-24T00:42:02Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-24T00:42:02Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-24T00:42:02Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-42/irradiance_distribution.png
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-03-24T00:42:02Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:03Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 14,282,913
+2026-03-24T00:42:03Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 14,282,913
+2026-03-24T00:42:03Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:03Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-03-24T00:42:03Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:42:03Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-03-24T00:42:03Z | INFO     |      nn.trainer | Epoch 1/27
+2026-03-24T00:44:13Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     |        __main__ | Starting all experiments
+2026-03-24T00:44:13Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-03-24T00:44:13Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-03-24T00:44:13Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-24T00:44:13Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-24T00:44:14Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-44/irradiance_distribution.png
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 14,282,913
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 14,282,913
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-03-24T00:44:14Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T00:44:14Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-03-24T00:44:14Z | INFO     |      nn.trainer | Epoch 1/27
+2026-03-24T01:07:14Z | INFO     |      nn.trainer | Train Loss: 6777.4796 | Val Loss: 8912.7708
+2026-03-24T01:07:14Z | INFO     |      nn.trainer | Best model saved (val_loss: 8912.7708)
+2026-03-24T01:07:14Z | INFO     |      nn.trainer | Epoch 2/27
+2026-03-24T01:30:12Z | INFO     |      nn.trainer | Train Loss: 2157.7737 | Val Loss: 2510.6909
+2026-03-24T01:30:12Z | INFO     |      nn.trainer | Best model saved (val_loss: 2510.6909)
+2026-03-24T01:30:12Z | INFO     |      nn.trainer | Epoch 3/27
+2026-03-24T01:53:10Z | INFO     |      nn.trainer | Train Loss: 1552.1941 | Val Loss: 2454.8578
+2026-03-24T01:53:11Z | INFO     |      nn.trainer | Best model saved (val_loss: 2454.8578)
+2026-03-24T01:53:11Z | INFO     |      nn.trainer | Epoch 4/27
+2026-03-24T02:16:09Z | INFO     |      nn.trainer | Train Loss: 1007.8175 | Val Loss: 574.7935
+2026-03-24T02:16:09Z | INFO     |      nn.trainer | Best model saved (val_loss: 574.7935)
+2026-03-24T02:16:09Z | INFO     |      nn.trainer | Epoch 5/27
+2026-03-24T02:39:07Z | INFO     |      nn.trainer | Train Loss: 874.3055 | Val Loss: 913.3401
+2026-03-24T02:39:07Z | INFO     |      nn.trainer | Epoch 6/27
+2026-03-24T03:02:02Z | INFO     |      nn.trainer | Train Loss: 663.5924 | Val Loss: 1122.0956
+2026-03-24T03:02:02Z | INFO     |      nn.trainer | Epoch 7/27
+2026-03-24T03:25:01Z | INFO     |      nn.trainer | Train Loss: 614.5958 | Val Loss: 433.4483
+2026-03-24T03:25:01Z | INFO     |      nn.trainer | Best model saved (val_loss: 433.4483)
+2026-03-24T03:25:01Z | INFO     |      nn.trainer | Epoch 8/27
+2026-03-24T03:47:59Z | INFO     |      nn.trainer | Train Loss: 514.3816 | Val Loss: 384.7479
+2026-03-24T03:47:59Z | INFO     |      nn.trainer | Best model saved (val_loss: 384.7479)
+2026-03-24T03:47:59Z | INFO     |      nn.trainer | Epoch 9/27
+2026-03-24T04:10:58Z | INFO     |      nn.trainer | Train Loss: 542.2894 | Val Loss: 951.8372
+2026-03-24T04:10:58Z | INFO     |      nn.trainer | Epoch 10/27
+2026-03-24T04:26:04Z | INFO     |      nn.trainer | Train Loss: 442.8069 | Val Loss: 740.9819
+2026-03-24T04:26:04Z | INFO     |      nn.trainer | Epoch 11/27
+2026-03-24T04:37:01Z | INFO     |      nn.trainer | Train Loss: 415.6051 | Val Loss: 226.6975
+2026-03-24T04:37:01Z | INFO     |      nn.trainer | Best model saved (val_loss: 226.6975)
+2026-03-24T04:37:01Z | INFO     |      nn.trainer | Epoch 12/27
+2026-03-24T04:47:58Z | INFO     |      nn.trainer | Train Loss: 360.6842 | Val Loss: 576.5821
+2026-03-24T04:47:58Z | INFO     |      nn.trainer | Epoch 13/27
+2026-03-24T04:58:55Z | INFO     |      nn.trainer | Train Loss: 346.8110 | Val Loss: 311.5309
+2026-03-24T04:58:55Z | INFO     |      nn.trainer | Epoch 14/27
+2026-03-24T05:09:53Z | INFO     |      nn.trainer | Train Loss: 338.9616 | Val Loss: 310.3886
+2026-03-24T05:09:53Z | INFO     |      nn.trainer | Epoch 15/27
+2026-03-24T05:20:50Z | INFO     |      nn.trainer | Train Loss: 303.3151 | Val Loss: 412.7497
+2026-03-24T05:20:50Z | INFO     |      nn.trainer | Epoch 16/27
+2026-03-24T05:31:47Z | INFO     |      nn.trainer | Train Loss: 279.8383 | Val Loss: 229.1474
+2026-03-24T05:31:47Z | INFO     |      nn.trainer | Epoch 17/27
+2026-03-24T05:42:44Z | INFO     |      nn.trainer | Train Loss: 298.5201 | Val Loss: 195.4006
+2026-03-24T05:42:44Z | INFO     |      nn.trainer | Best model saved (val_loss: 195.4006)
+2026-03-24T05:42:44Z | INFO     |      nn.trainer | Epoch 18/27
+2026-03-24T05:53:41Z | INFO     |      nn.trainer | Train Loss: 244.6118 | Val Loss: 195.3382
+2026-03-24T05:53:42Z | INFO     |      nn.trainer | Best model saved (val_loss: 195.3382)
+2026-03-24T05:53:42Z | INFO     |      nn.trainer | Epoch 19/27
+2026-03-24T06:04:39Z | INFO     |      nn.trainer | Train Loss: 248.5131 | Val Loss: 235.0172
+2026-03-24T06:04:39Z | INFO     |      nn.trainer | Epoch 20/27
+2026-03-24T06:15:35Z | INFO     |      nn.trainer | Train Loss: 250.3548 | Val Loss: 208.0891
+2026-03-24T06:15:35Z | INFO     |      nn.trainer | Epoch 21/27
+2026-03-24T06:26:33Z | INFO     |      nn.trainer | Train Loss: 237.3332 | Val Loss: 195.2642
+2026-03-24T06:26:33Z | INFO     |      nn.trainer | Best model saved (val_loss: 195.2642)
+2026-03-24T06:26:33Z | INFO     |      nn.trainer | Epoch 22/27
+2026-03-24T06:37:30Z | INFO     |      nn.trainer | Train Loss: 222.6067 | Val Loss: 190.6338
+2026-03-24T06:37:30Z | INFO     |      nn.trainer | Best model saved (val_loss: 190.6338)
+2026-03-24T06:37:30Z | INFO     |      nn.trainer | Epoch 23/27
+2026-03-24T06:48:27Z | INFO     |      nn.trainer | Train Loss: 248.9020 | Val Loss: 187.7055
+2026-03-24T06:48:28Z | INFO     |      nn.trainer | Best model saved (val_loss: 187.7055)
+2026-03-24T06:48:28Z | INFO     |      nn.trainer | Epoch 24/27
+2026-03-24T06:59:25Z | INFO     |      nn.trainer | Train Loss: 210.6346 | Val Loss: 214.8430
+2026-03-24T06:59:25Z | INFO     |      nn.trainer | Epoch 25/27
+2026-03-24T07:10:22Z | INFO     |      nn.trainer | Train Loss: 206.9947 | Val Loss: 243.9438
+2026-03-24T07:10:22Z | INFO     |      nn.trainer | Epoch 26/27
+2026-03-24T07:21:18Z | INFO     |      nn.trainer | Train Loss: 215.5689 | Val Loss: 158.4621
+2026-03-24T07:21:18Z | INFO     |      nn.trainer | Best model saved (val_loss: 158.4621)
+2026-03-24T07:21:18Z | INFO     |      nn.trainer | Epoch 27/27
+2026-03-24T07:32:16Z | INFO     |      nn.trainer | Train Loss: 188.8492 | Val Loss: 413.9607
+2026-03-24T07:32:16Z | INFO     |      nn.trainer | Training complete. Time elapsed: 408.0 min
+2026-03-24T07:32:16Z | INFO     |      nn.trainer | Peak GPU Memory: 20622.08 MB
+2026-03-24T07:32:16Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:32:16Z | INFO     | experiments.fisheye.main_fisheye | Testing
+2026-03-24T07:32:16Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:32:16Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/fisheye_model_gap_2026-03-24_01-44.pth
+2026-03-24T07:33:06Z | INFO     | evaluation.evaluator | Test Results:
+2026-03-24T07:33:06Z | INFO     | evaluation.evaluator |   MSE Loss: 136.2360
+2026-03-24T07:33:06Z | INFO     | evaluation.evaluator |   RMSE: 11.6720 W/m²
+2026-03-24T07:33:06Z | INFO     | evaluation.evaluator |   MAE: 6.9125 W/m²
+2026-03-24T07:33:06Z | INFO     | evaluation.evaluator |   R² Score: 0.9982
+2026-03-24T07:33:06Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:06Z | INFO     | experiments.fisheye.main_fisheye | Generating plots
+2026-03-24T07:33:06Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:06Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-44/training_curves.png
+2026-03-24T07:33:07Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-44/predictions_vs_actual.png
+2026-03-24T07:33:07Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-44/error_distribution.png
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | Creating report
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_01-44/training_report_2026-03-24_08-33.md
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | Training Complete
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.fisheye.main_fisheye | Model saved: /home/xtsimbota_135764/masters/models/fisheye_model_gap_2026-03-24_01-44.pth
+2026-03-24T07:33:07Z | INFO     |        __main__ | Experiment 0 (Fisheye): completed successfully
+2026-03-24T07:33:07Z | INFO     |        __main__ | GPU memory released after Fisheye
+2026-03-24T07:33:07Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     |        __main__ | Experiment 1: Rubsheet 3-to-1
+2026-03-24T07:33:07Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Rubsheet 3-to-1 Experiment [Custom CNN]
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Loading dataset
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Train batches: 1600
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Val batches: 178
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Test batches: 289
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Exploratory Data Analysis
+2026-03-24T07:33:07Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-24T07:33:07Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-24T07:33:08Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/rubsheet_3to1/2026-03-24_08-33/irradiance_distribution.png
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Creating model
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Total parameters: 14,282,913
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Trainable parameters: 14,282,913
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Training
+2026-03-24T07:33:08Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-03-24T07:33:08Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-03-24T07:33:08Z | INFO     |      nn.trainer | Epoch 1/27
+2026-03-24T07:41:21Z | INFO     |      nn.trainer | Train Loss: 6742.0205 | Val Loss: 1476.2984
+2026-03-24T07:41:21Z | INFO     |      nn.trainer | Best model saved (val_loss: 1476.2984)
+2026-03-24T07:41:21Z | INFO     |      nn.trainer | Epoch 2/27
+2026-03-24T07:49:34Z | INFO     |      nn.trainer | Train Loss: 1823.3544 | Val Loss: 954.9059
+2026-03-24T07:49:35Z | INFO     |      nn.trainer | Best model saved (val_loss: 954.9059)
+2026-03-24T07:49:35Z | INFO     |      nn.trainer | Epoch 3/27
+2026-03-24T07:57:48Z | INFO     |      nn.trainer | Train Loss: 1167.2081 | Val Loss: 2181.4659
+2026-03-24T07:57:48Z | INFO     |      nn.trainer | Epoch 4/27
+2026-03-24T08:06:02Z | INFO     |      nn.trainer | Train Loss: 905.8558 | Val Loss: 506.2698
+2026-03-24T08:06:02Z | INFO     |      nn.trainer | Best model saved (val_loss: 506.2698)
+2026-03-24T08:06:02Z | INFO     |      nn.trainer | Epoch 5/27
+2026-03-24T08:14:16Z | INFO     |      nn.trainer | Train Loss: 750.8037 | Val Loss: 637.9128
+2026-03-24T08:14:16Z | INFO     |      nn.trainer | Epoch 6/27
+2026-03-24T08:22:30Z | INFO     |      nn.trainer | Train Loss: 639.4728 | Val Loss: 413.5711
+2026-03-24T08:22:30Z | INFO     |      nn.trainer | Best model saved (val_loss: 413.5711)
+2026-03-24T08:22:30Z | INFO     |      nn.trainer | Epoch 7/27
+2026-03-24T08:30:44Z | INFO     |      nn.trainer | Train Loss: 571.6524 | Val Loss: 334.4435
+2026-03-24T08:30:45Z | INFO     |      nn.trainer | Best model saved (val_loss: 334.4435)
+2026-03-24T08:30:45Z | INFO     |      nn.trainer | Epoch 8/27
+2026-03-24T08:38:59Z | INFO     |      nn.trainer | Train Loss: 523.0452 | Val Loss: 293.3415
+2026-03-24T08:38:59Z | INFO     |      nn.trainer | Best model saved (val_loss: 293.3415)
+2026-03-24T08:38:59Z | INFO     |      nn.trainer | Epoch 9/27
+2026-03-24T08:47:12Z | INFO     |      nn.trainer | Train Loss: 480.5052 | Val Loss: 276.4890
+2026-03-24T08:47:12Z | INFO     |      nn.trainer | Best model saved (val_loss: 276.4890)
+2026-03-24T08:47:12Z | INFO     |      nn.trainer | Epoch 10/27
+2026-03-24T08:55:25Z | INFO     |      nn.trainer | Train Loss: 409.4531 | Val Loss: 520.4203
+2026-03-24T08:55:25Z | INFO     |      nn.trainer | Epoch 11/27
+2026-03-24T09:03:38Z | INFO     |      nn.trainer | Train Loss: 437.5648 | Val Loss: 297.7854
+2026-03-24T09:03:38Z | INFO     |      nn.trainer | Epoch 12/27
+2026-03-24T09:11:52Z | INFO     |      nn.trainer | Train Loss: 372.3810 | Val Loss: 338.6192
+2026-03-24T09:11:52Z | INFO     |      nn.trainer | Epoch 13/27
+2026-03-24T09:12:45Z | INFO     |        __main__ | GPU memory released after Rubsheet 3-to-1
+2026-03-24T09:32:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     |        __main__ | Starting all experiments
+2026-03-24T09:32:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-03-24T09:32:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-03-24T09:32:10Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-24T09:32:10Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-24T09:32:10Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/analysis/fisheye/2026-03-24_10-32/irradiance_distribution.png
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 1,207,201
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 1,207,201
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-03-24T09:32:11Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T09:32:11Z | INFO     |      nn.trainer | Starting training for 15 epochs
+2026-03-24T09:32:11Z | INFO     |      nn.trainer | Epoch 1/15
+2026-03-24T14:05:23Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     |        __main__ | Starting all experiments
+2026-03-24T14:05:23Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-03-24T14:05:23Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-03-24T14:05:23Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | DataFrame Info:
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | Total samples: 33067
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | Missing values: 0
+2026-03-24T14:05:23Z | INFO     |    eda.analysis | Zero values: 5
+2026-03-24T14:05:24Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-03-24_15-05/irradiance_distribution.png
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 1,207,201
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 1,207,201
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-03-24T14:05:24Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-03-24T14:05:24Z | INFO     |      nn.trainer | Starting training for 15 epochs
+2026-03-24T14:05:24Z | INFO     |      nn.trainer | Epoch 1/15
+2026-04-04T14:36:20Z | INFO     |        __main__ | ================================================================================
+2026-04-04T14:36:20Z | INFO     |        __main__ |   Visualization Grid Search — IG & Occlusion
+2026-04-04T14:36:20Z | INFO     |        __main__ | ================================================================================
+2026-04-04T14:36:20Z | INFO     |        __main__ | 
+2026-04-04T14:36:20Z | INFO     |        __main__ | ============================================================
+2026-04-04T14:36:20Z | INFO     |        __main__ |   Experiment: Fisheye
+2026-04-04T14:36:20Z | INFO     |        __main__ | ============================================================
+2026-04-04T14:36:20Z | INFO     |        __main__ | Loading test data ...
+2026-04-04T14:36:20Z | INFO     |        __main__ | Model: /home/xtsimbota_135764/masters/models/fisheye_model_gap_2026-03-24_15-05.pth
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [9.3–11.2]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [1.7–17.7]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [3.7–148.8]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'best': label [18–121] W/m², error [0.0–0.0]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'worst': label [214–1056] W/m², error [152.3–213.4]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [3.8–32.4]
+2026-04-04T14:37:32Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/summary.csv (4622 rows)
+2026-04-04T14:37:32Z | INFO     |        __main__ |   [IG] n_steps=20
+2026-04-04T14:37:34Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Low Irradiance (7 images) …
+2026-04-04T14:37:46Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/low_ig.png
+2026-04-04T14:37:49Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Medium Irradiance (7 images) …
+2026-04-04T14:37:59Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/medium_ig.png
+2026-04-04T14:38:01Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: High Irradiance (7 images) …
+2026-04-04T14:38:11Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/high_ig.png
+2026-04-04T14:38:14Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T14:38:24Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/best_ig.png
+2026-04-04T14:38:26Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T14:38:36Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/worst_ig.png
+2026-04-04T14:38:38Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Random Sample (7 images) …
+2026-04-04T14:38:48Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/random_ig.png
+2026-04-04T14:38:48Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps20/completeness.csv
+2026-04-04T14:38:48Z | INFO     |        __main__ |        OK  (76.3 s)
+2026-04-04T14:38:48Z | INFO     |        __main__ |   [IG] n_steps=40
+2026-04-04T14:38:52Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Low Irradiance (7 images) …
+2026-04-04T14:39:06Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/low_ig.png
+2026-04-04T14:39:10Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Medium Irradiance (7 images) …
+2026-04-04T14:39:22Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/medium_ig.png
+2026-04-04T14:39:27Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: High Irradiance (7 images) …
+2026-04-04T14:39:38Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/high_ig.png
+2026-04-04T14:39:42Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T14:39:54Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/best_ig.png
+2026-04-04T14:39:59Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T14:40:10Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/worst_ig.png
+2026-04-04T14:40:15Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Random Sample (7 images) …
+2026-04-04T14:40:27Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/random_ig.png
+2026-04-04T14:40:27Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps40/completeness.csv
+2026-04-04T14:40:27Z | INFO     |        __main__ |        OK  (98.4 s)
+2026-04-04T14:40:27Z | INFO     |        __main__ |   [IG] n_steps=80
+2026-04-04T14:40:35Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Low Irradiance (7 images) …
+2026-04-04T14:40:52Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/low_ig.png
+2026-04-04T14:41:00Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Medium Irradiance (7 images) …
+2026-04-04T14:41:16Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/medium_ig.png
+2026-04-04T14:41:24Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: High Irradiance (7 images) …
+2026-04-04T14:41:40Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/high_ig.png
+2026-04-04T14:41:48Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T14:42:04Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/best_ig.png
+2026-04-04T14:42:12Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T14:42:27Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/worst_ig.png
+2026-04-04T14:42:36Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Random Sample (7 images) …
+2026-04-04T14:42:51Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/random_ig.png
+2026-04-04T14:42:51Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps80/completeness.csv
+2026-04-04T14:42:51Z | INFO     |        __main__ |        OK  (144.5 s)
+2026-04-04T14:42:51Z | INFO     |        __main__ |   [IG] n_steps=120
+2026-04-04T14:43:03Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Low Irradiance (7 images) …
+2026-04-04T14:43:24Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/low_ig.png
+2026-04-04T14:43:36Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Medium Irradiance (7 images) …
+2026-04-04T14:43:56Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/medium_ig.png
+2026-04-04T14:44:08Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: High Irradiance (7 images) …
+2026-04-04T14:44:27Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/high_ig.png
+2026-04-04T14:44:39Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T14:44:59Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/best_ig.png
+2026-04-04T14:45:11Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T14:45:30Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/worst_ig.png
+2026-04-04T14:45:42Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Random Sample (7 images) …
+2026-04-04T14:46:01Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/random_ig.png
+2026-04-04T14:46:01Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/ig_nsteps120/completeness.csv
+2026-04-04T14:46:01Z | INFO     |        __main__ |        OK  (190.0 s)
+2026-04-04T14:46:02Z | INFO     |        __main__ |   [Occ] patch=30, stride=13
+2026-04-04T14:46:02Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Low Irradiance (7 images) …
+2026-04-04T14:51:29Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/low_occlusion.png
+2026-04-04T14:51:29Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Medium Irradiance (7 images) …
+2026-04-04T14:56:58Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/medium_occlusion.png
+2026-04-04T14:56:58Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: High Irradiance (7 images) …
+2026-04-04T15:02:26Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/high_occlusion.png
+2026-04-04T15:02:26Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:07:54Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/best_occlusion.png
+2026-04-04T15:07:54Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:13:22Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/worst_occlusion.png
+2026-04-04T15:13:22Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Random Sample (7 images) …
+2026-04-04T15:18:50Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/fisheye/occ_p30_s13/random_occlusion.png
+2026-04-04T15:18:50Z | INFO     |        __main__ |        OK  (1968.7 s)
+2026-04-04T15:18:54Z | INFO     |        __main__ |   GPU memory released after Fisheye.
+2026-04-04T15:18:54Z | INFO     |        __main__ | 
+2026-04-04T15:18:54Z | INFO     |        __main__ | ============================================================
+2026-04-04T15:18:54Z | INFO     |        __main__ |   Experiment: Rubsheet 3-to-1
+2026-04-04T15:18:54Z | INFO     |        __main__ | ============================================================
+2026-04-04T15:18:54Z | INFO     |        __main__ | Loading test data ...
+2026-04-04T15:18:54Z | INFO     |        __main__ | Model: /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_gap_2026-03-24_17-50.pth
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Collected 4622 test samples.
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'low': label [0–0] W/m², error [4.0–5.3]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'medium': label [157–157] W/m², error [3.4–17.3]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'high': label [1083–1211] W/m², error [3.8–180.6]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'best': label [13–153] W/m², error [0.0–0.0]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'worst': label [214–1142] W/m², error [170.6–279.4]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Group 'random': label [73–591] W/m², error [0.4–41.8]
+2026-04-04T15:19:46Z | INFO     | utils.attribution_map | Summary CSV saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/summary.csv (4622 rows)
+2026-04-04T15:19:46Z | INFO     |        __main__ |   [IG] n_steps=20
+2026-04-04T15:19:48Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Low Irradiance (7 images) …
+2026-04-04T15:19:56Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/low_ig.png
+2026-04-04T15:19:58Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Medium Irradiance (7 images) …
+2026-04-04T15:20:05Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/medium_ig.png
+2026-04-04T15:20:07Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: High Irradiance (7 images) …
+2026-04-04T15:20:14Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/high_ig.png
+2026-04-04T15:20:16Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:20:24Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/best_ig.png
+2026-04-04T15:20:26Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:20:33Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/worst_ig.png
+2026-04-04T15:20:35Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=20) grid: Random Sample (7 images) …
+2026-04-04T15:20:42Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/random_ig.png
+2026-04-04T15:20:42Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps20/completeness.csv
+2026-04-04T15:20:42Z | INFO     |        __main__ |        OK  (56.5 s)
+2026-04-04T15:20:42Z | INFO     |        __main__ |   [IG] n_steps=40
+2026-04-04T15:20:46Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Low Irradiance (7 images) …
+2026-04-04T15:20:55Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/low_ig.png
+2026-04-04T15:20:59Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Medium Irradiance (7 images) …
+2026-04-04T15:21:07Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/medium_ig.png
+2026-04-04T15:21:10Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: High Irradiance (7 images) …
+2026-04-04T15:21:19Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/high_ig.png
+2026-04-04T15:21:22Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:21:31Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/best_ig.png
+2026-04-04T15:21:35Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:21:43Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/worst_ig.png
+2026-04-04T15:21:47Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=40) grid: Random Sample (7 images) …
+2026-04-04T15:21:55Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/random_ig.png
+2026-04-04T15:21:55Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps40/completeness.csv
+2026-04-04T15:21:55Z | INFO     |        __main__ |        OK  (72.9 s)
+2026-04-04T15:21:55Z | INFO     |        __main__ |   [IG] n_steps=80
+2026-04-04T15:22:02Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Low Irradiance (7 images) …
+2026-04-04T15:22:14Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/low_ig.png
+2026-04-04T15:22:20Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Medium Irradiance (7 images) …
+2026-04-04T15:22:32Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/medium_ig.png
+2026-04-04T15:22:38Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: High Irradiance (7 images) …
+2026-04-04T15:22:49Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/high_ig.png
+2026-04-04T15:22:55Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:23:08Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/best_ig.png
+2026-04-04T15:23:14Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:23:25Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/worst_ig.png
+2026-04-04T15:23:31Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=80) grid: Random Sample (7 images) …
+2026-04-04T15:23:43Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/random_ig.png
+2026-04-04T15:23:43Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps80/completeness.csv
+2026-04-04T15:23:43Z | INFO     |        __main__ |        OK  (107.5 s)
+2026-04-04T15:23:43Z | INFO     |        __main__ |   [IG] n_steps=120
+2026-04-04T15:23:52Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Low Irradiance (7 images) …
+2026-04-04T15:24:07Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/low_ig.png
+2026-04-04T15:24:16Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Medium Irradiance (7 images) …
+2026-04-04T15:24:31Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/medium_ig.png
+2026-04-04T15:24:40Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: High Irradiance (7 images) …
+2026-04-04T15:24:54Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/high_ig.png
+2026-04-04T15:25:03Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:25:18Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/best_ig.png
+2026-04-04T15:25:27Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:25:41Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/worst_ig.png
+2026-04-04T15:25:50Z | INFO     | utils.attribution_map | Generating signed IG (n_steps=120) grid: Random Sample (7 images) …
+2026-04-04T15:26:05Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/random_ig.png
+2026-04-04T15:26:05Z | INFO     |        __main__ | IG completeness report saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/ig_nsteps120/completeness.csv
+2026-04-04T15:26:05Z | INFO     |        __main__ |        OK  (141.6 s)
+2026-04-04T15:26:05Z | INFO     |        __main__ |   [Occ] patch=30, stride=13
+2026-04-04T15:26:05Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Low Irradiance (7 images) …
+2026-04-04T15:29:02Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/low_occlusion.png
+2026-04-04T15:29:02Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Medium Irradiance (7 images) …
+2026-04-04T15:32:00Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/medium_occlusion.png
+2026-04-04T15:32:00Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: High Irradiance (7 images) …
+2026-04-04T15:34:57Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/high_occlusion.png
+2026-04-04T15:34:58Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Best Predictions (lowest error) (7 images) …
+2026-04-04T15:37:55Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/best_occlusion.png
+2026-04-04T15:37:55Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Worst Predictions (highest error) (7 images) …
+2026-04-04T15:40:53Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/worst_occlusion.png
+2026-04-04T15:40:53Z | INFO     | utils.attribution_map | Generating Occlusion (patch=30, stride=13) grid: Random Sample (7 images) …
+2026-04-04T15:43:51Z | INFO     | utils.attribution_map | Saved → /home/xtsimbota_135764/masters/analysis/viz_gridsearch/rubsheet_3to1/occ_p30_s13/random_occlusion.png
+2026-04-04T15:43:51Z | INFO     |        __main__ |        OK  (1065.9 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |   GPU memory released after Rubsheet 3-to-1.
+2026-04-04T15:43:51Z | INFO     |        __main__ | Summary written -> /home/xtsimbota_135764/masters/analysis/viz_gridsearch/gridsearch_results.md
+2026-04-04T15:43:51Z | INFO     |        __main__ | 
+2026-04-04T15:43:51Z | INFO     |        __main__ | ================================================================================
+2026-04-04T15:43:51Z | INFO     |        __main__ |   Grid search complete.  4051.3 s  (67.5 min)
+2026-04-04T15:43:51Z | INFO     |        __main__ | ================================================================================
+2026-04-04T15:43:51Z | INFO     |        __main__ |   10/10 succeeded, 0 failed
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Fisheye / IG / n_steps=20  (76.3 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Fisheye / IG / n_steps=40  (98.4 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Fisheye / IG / n_steps=80  (144.5 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Fisheye / IG / n_steps=120  (190.0 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Fisheye / Occlusion / patch=30, stride=13  (1968.7 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Rubsheet 3-to-1 / IG / n_steps=20  (56.5 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Rubsheet 3-to-1 / IG / n_steps=40  (72.9 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Rubsheet 3-to-1 / IG / n_steps=80  (107.5 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Rubsheet 3-to-1 / IG / n_steps=120  (141.6 s)
+2026-04-04T15:43:51Z | INFO     |        __main__ |     [OK]  Rubsheet 3-to-1 / Occlusion / patch=30, stride=13  (1065.9 s)
+2026-04-17T13:01:32Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     |        __main__ | Starting all experiments
+2026-04-17T13:01:32Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-04-17T13:01:32Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-04-17T13:01:32Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | DataFrame Info:
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | Total samples: 33067
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | Missing values: 0
+2026-04-17T13:01:32Z | INFO     |    eda.analysis | Zero values: 5
+2026-04-17T13:01:33Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-01/irradiance_distribution.png
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 1,207,201
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 1,207,201
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-04-17T13:01:33Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:01:33Z | INFO     |      nn.trainer | Starting training for 15 epochs
+2026-04-17T13:01:33Z | INFO     |      nn.trainer | Epoch 1/15
+2026-04-17T13:01:35Z | INFO     |        __main__ | GPU memory released after Fisheye
+2026-04-17T13:02:34Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     |        __main__ | Starting all experiments
+2026-04-17T13:02:34Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     |        __main__ | Experiment 0: Fisheye
+2026-04-17T13:02:34Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Fisheye Experiment [Custom CNN]
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Loading dataset
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Train batches: 1600
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Val batches: 178
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Test batches: 289
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Exploratory Data Analysis
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | DataFrame Info:
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | Total samples: 33067
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | Missing values: 0
+2026-04-17T13:02:34Z | INFO     |    eda.analysis | Zero values: 5
+2026-04-17T13:02:34Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-02/irradiance_distribution.png
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Creating model
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Total parameters: 1,207,201
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Trainable parameters: 1,207,201
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | Training
+2026-04-17T13:02:34Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T13:02:34Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-04-17T13:02:34Z | INFO     |      nn.trainer | Epoch 1/27
+2026-04-17T13:13:29Z | INFO     |      nn.trainer | Train Loss: 45566.3065 | Val Loss: 3618.8266
+2026-04-17T13:13:29Z | INFO     |      nn.trainer | Best model saved (val_loss: 3618.8266)
+2026-04-17T13:13:29Z | INFO     |      nn.trainer | Epoch 2/27
+2026-04-17T13:24:22Z | INFO     |      nn.trainer | Train Loss: 3756.0827 | Val Loss: 12347.1316
+2026-04-17T13:24:22Z | INFO     |      nn.trainer | Epoch 3/27
+2026-04-17T13:35:16Z | INFO     |      nn.trainer | Train Loss: 2680.7866 | Val Loss: 1411.6818
+2026-04-17T13:35:16Z | INFO     |      nn.trainer | Best model saved (val_loss: 1411.6818)
+2026-04-17T13:35:16Z | INFO     |      nn.trainer | Epoch 4/27
+2026-04-17T13:46:10Z | INFO     |      nn.trainer | Train Loss: 2185.5770 | Val Loss: 6413.7770
+2026-04-17T13:46:10Z | INFO     |      nn.trainer | Epoch 5/27
+2026-04-17T13:57:04Z | INFO     |      nn.trainer | Train Loss: 1870.4615 | Val Loss: 1667.5235
+2026-04-17T13:57:04Z | INFO     |      nn.trainer | Epoch 6/27
+2026-04-17T14:07:57Z | INFO     |      nn.trainer | Train Loss: 1635.8303 | Val Loss: 3846.8392
+2026-04-17T14:07:57Z | INFO     |      nn.trainer | Epoch 7/27
+2026-04-17T14:18:51Z | INFO     |      nn.trainer | Train Loss: 1509.8948 | Val Loss: 1039.5389
+2026-04-17T14:18:51Z | INFO     |      nn.trainer | Best model saved (val_loss: 1039.5389)
+2026-04-17T14:18:51Z | INFO     |      nn.trainer | Epoch 8/27
+2026-04-17T14:29:45Z | INFO     |      nn.trainer | Train Loss: 1288.9820 | Val Loss: 1659.4953
+2026-04-17T14:29:45Z | INFO     |      nn.trainer | Epoch 9/27
+2026-04-17T14:40:38Z | INFO     |      nn.trainer | Train Loss: 1144.8245 | Val Loss: 3277.1270
+2026-04-17T14:40:38Z | INFO     |      nn.trainer | Epoch 10/27
+2026-04-17T14:51:32Z | INFO     |      nn.trainer | Train Loss: 1099.3559 | Val Loss: 608.8364
+2026-04-17T14:51:32Z | INFO     |      nn.trainer | Best model saved (val_loss: 608.8364)
+2026-04-17T14:51:32Z | INFO     |      nn.trainer | Epoch 11/27
+2026-04-17T15:02:26Z | INFO     |      nn.trainer | Train Loss: 1000.7679 | Val Loss: 663.0817
+2026-04-17T15:02:26Z | INFO     |      nn.trainer | Epoch 12/27
+2026-04-17T15:13:19Z | INFO     |      nn.trainer | Train Loss: 866.1270 | Val Loss: 703.3442
+2026-04-17T15:13:19Z | INFO     |      nn.trainer | Epoch 13/27
+2026-04-17T15:24:13Z | INFO     |      nn.trainer | Train Loss: 806.5861 | Val Loss: 1397.6653
+2026-04-17T15:24:13Z | INFO     |      nn.trainer | Epoch 14/27
+2026-04-17T15:35:06Z | INFO     |      nn.trainer | Train Loss: 745.2307 | Val Loss: 757.6555
+2026-04-17T15:35:06Z | INFO     |      nn.trainer | Epoch 15/27
+2026-04-17T15:46:00Z | INFO     |      nn.trainer | Train Loss: 666.5765 | Val Loss: 386.7732
+2026-04-17T15:46:00Z | INFO     |      nn.trainer | Best model saved (val_loss: 386.7732)
+2026-04-17T15:46:00Z | INFO     |      nn.trainer | Epoch 16/27
+2026-04-17T15:56:53Z | INFO     |      nn.trainer | Train Loss: 631.7374 | Val Loss: 942.0320
+2026-04-17T15:56:53Z | INFO     |      nn.trainer | Epoch 17/27
+2026-04-17T16:07:48Z | INFO     |      nn.trainer | Train Loss: 610.4406 | Val Loss: 529.1577
+2026-04-17T16:07:48Z | INFO     |      nn.trainer | Epoch 18/27
+2026-04-17T16:18:42Z | INFO     |      nn.trainer | Train Loss: 568.8608 | Val Loss: 435.1501
+2026-04-17T16:18:42Z | INFO     |      nn.trainer | Epoch 19/27
+2026-04-17T16:29:36Z | INFO     |      nn.trainer | Train Loss: 537.1749 | Val Loss: 564.6547
+2026-04-17T16:29:36Z | INFO     |      nn.trainer | Epoch 20/27
+2026-04-17T16:40:29Z | INFO     |      nn.trainer | Train Loss: 505.1631 | Val Loss: 369.0873
+2026-04-17T16:40:29Z | INFO     |      nn.trainer | Best model saved (val_loss: 369.0873)
+2026-04-17T16:40:29Z | INFO     |      nn.trainer | Epoch 21/27
+2026-04-17T16:51:23Z | INFO     |      nn.trainer | Train Loss: 472.8020 | Val Loss: 346.4688
+2026-04-17T16:51:23Z | INFO     |      nn.trainer | Best model saved (val_loss: 346.4688)
+2026-04-17T16:51:23Z | INFO     |      nn.trainer | Epoch 22/27
+2026-04-17T17:02:17Z | INFO     |      nn.trainer | Train Loss: 441.8699 | Val Loss: 598.8548
+2026-04-17T17:02:17Z | INFO     |      nn.trainer | Epoch 23/27
+2026-04-17T17:13:11Z | INFO     |      nn.trainer | Train Loss: 463.5011 | Val Loss: 690.4764
+2026-04-17T17:13:11Z | INFO     |      nn.trainer | Epoch 24/27
+2026-04-17T17:24:04Z | INFO     |      nn.trainer | Train Loss: 431.7729 | Val Loss: 498.1898
+2026-04-17T17:24:04Z | INFO     |      nn.trainer | Epoch 25/27
+2026-04-17T17:34:58Z | INFO     |      nn.trainer | Train Loss: 423.3921 | Val Loss: 611.8371
+2026-04-17T17:34:58Z | INFO     |      nn.trainer | Epoch 26/27
+2026-04-17T17:45:51Z | INFO     |      nn.trainer | Train Loss: 376.1954 | Val Loss: 782.7605
+2026-04-17T17:45:51Z | INFO     |      nn.trainer | Epoch 27/27
+2026-04-17T17:56:45Z | INFO     |      nn.trainer | Train Loss: 387.6699 | Val Loss: 572.7266
+2026-04-17T17:56:45Z | INFO     |      nn.trainer | Training complete. Time elapsed: 294.2 min
+2026-04-17T17:56:45Z | INFO     |      nn.trainer | Peak GPU Memory: 20420.05 MB
+2026-04-17T17:56:45Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:56:45Z | INFO     | experiments.fisheye.main_fisheye | Testing
+2026-04-17T17:56:45Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:56:45Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/fisheye_model_gap_2026-04-17_15-02.pth
+2026-04-17T17:57:35Z | INFO     | evaluation.evaluator | Test Results:
+2026-04-17T17:57:35Z | INFO     | evaluation.evaluator |   MSE Loss: 325.8132
+2026-04-17T17:57:35Z | INFO     | evaluation.evaluator |   RMSE: 18.0503 W/m²
+2026-04-17T17:57:35Z | INFO     | evaluation.evaluator |   MAE: 12.4328 W/m²
+2026-04-17T17:57:35Z | INFO     | evaluation.evaluator |   R² Score: 0.9956
+2026-04-17T17:57:35Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:35Z | INFO     | experiments.fisheye.main_fisheye | Generating plots
+2026-04-17T17:57:35Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:35Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-02/training_curves.png
+2026-04-17T17:57:35Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-02/predictions_vs_actual.png
+2026-04-17T17:57:36Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-02/error_distribution.png
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | Creating report
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/results/fisheye/2026-04-17_15-02/training_report_2026-04-17_19-57.md
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | Training Complete
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.fisheye.main_fisheye | Model saved: /home/xtsimbota_135764/masters/models/fisheye_model_gap_2026-04-17_15-02.pth
+2026-04-17T17:57:36Z | INFO     |        __main__ | Experiment 0 (Fisheye): completed successfully
+2026-04-17T17:57:36Z | INFO     |        __main__ | GPU memory released after Fisheye
+2026-04-17T17:57:36Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     |        __main__ | Experiment 1: Rubsheet 3-to-1
+2026-04-17T17:57:36Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Rubsheet 3-to-1 Experiment [Custom CNN]
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Loading dataset
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Train batches: 1600
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Val batches: 178
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Test batches: 289
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Exploratory Data Analysis
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | DataFrame Info:
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | Total samples: 33067
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | Missing values: 0
+2026-04-17T17:57:36Z | INFO     |    eda.analysis | Zero values: 5
+2026-04-17T17:57:36Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_3to1/2026-04-17_19-57/irradiance_distribution.png
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Creating model
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Total parameters: 1,207,201
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Trainable parameters: 1,207,201
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Training
+2026-04-17T17:57:36Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T17:57:36Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-04-17T17:57:36Z | INFO     |      nn.trainer | Epoch 1/27
+2026-04-17T18:05:47Z | INFO     |      nn.trainer | Train Loss: 47155.0770 | Val Loss: 4080.9320
+2026-04-17T18:05:47Z | INFO     |      nn.trainer | Best model saved (val_loss: 4080.9320)
+2026-04-17T18:05:47Z | INFO     |      nn.trainer | Epoch 2/27
+2026-04-17T18:13:58Z | INFO     |      nn.trainer | Train Loss: 4383.7765 | Val Loss: 4126.3475
+2026-04-17T18:13:58Z | INFO     |      nn.trainer | Epoch 3/27
+2026-04-17T18:22:09Z | INFO     |      nn.trainer | Train Loss: 3340.9128 | Val Loss: 2845.8628
+2026-04-17T18:22:09Z | INFO     |      nn.trainer | Best model saved (val_loss: 2845.8628)
+2026-04-17T18:22:09Z | INFO     |      nn.trainer | Epoch 4/27
+2026-04-17T18:30:21Z | INFO     |      nn.trainer | Train Loss: 2571.8886 | Val Loss: 2157.6790
+2026-04-17T18:30:21Z | INFO     |      nn.trainer | Best model saved (val_loss: 2157.6790)
+2026-04-17T18:30:21Z | INFO     |      nn.trainer | Epoch 5/27
+2026-04-17T18:38:32Z | INFO     |      nn.trainer | Train Loss: 2242.3207 | Val Loss: 1216.8882
+2026-04-17T18:38:32Z | INFO     |      nn.trainer | Best model saved (val_loss: 1216.8882)
+2026-04-17T18:38:32Z | INFO     |      nn.trainer | Epoch 6/27
+2026-04-17T18:46:43Z | INFO     |      nn.trainer | Train Loss: 2058.9957 | Val Loss: 1174.6044
+2026-04-17T18:46:43Z | INFO     |      nn.trainer | Best model saved (val_loss: 1174.6044)
+2026-04-17T18:46:43Z | INFO     |      nn.trainer | Epoch 7/27
+2026-04-17T18:54:54Z | INFO     |      nn.trainer | Train Loss: 1720.7163 | Val Loss: 1574.7016
+2026-04-17T18:54:54Z | INFO     |      nn.trainer | Epoch 8/27
+2026-04-17T19:03:06Z | INFO     |      nn.trainer | Train Loss: 1582.9320 | Val Loss: 916.7304
+2026-04-17T19:03:06Z | INFO     |      nn.trainer | Best model saved (val_loss: 916.7304)
+2026-04-17T19:03:06Z | INFO     |      nn.trainer | Epoch 9/27
+2026-04-17T19:11:17Z | INFO     |      nn.trainer | Train Loss: 1481.7758 | Val Loss: 1863.0718
+2026-04-17T19:11:17Z | INFO     |      nn.trainer | Epoch 10/27
+2026-04-17T19:19:29Z | INFO     |      nn.trainer | Train Loss: 1381.9949 | Val Loss: 1020.2927
+2026-04-17T19:19:29Z | INFO     |      nn.trainer | Epoch 11/27
+2026-04-17T19:27:40Z | INFO     |      nn.trainer | Train Loss: 1238.9642 | Val Loss: 814.6398
+2026-04-17T19:27:40Z | INFO     |      nn.trainer | Best model saved (val_loss: 814.6398)
+2026-04-17T19:27:40Z | INFO     |      nn.trainer | Epoch 12/27
+2026-04-17T19:35:51Z | INFO     |      nn.trainer | Train Loss: 1137.0282 | Val Loss: 666.3521
+2026-04-17T19:35:51Z | INFO     |      nn.trainer | Best model saved (val_loss: 666.3521)
+2026-04-17T19:35:51Z | INFO     |      nn.trainer | Epoch 13/27
+2026-04-17T19:44:02Z | INFO     |      nn.trainer | Train Loss: 1034.7581 | Val Loss: 661.4398
+2026-04-17T19:44:02Z | INFO     |      nn.trainer | Best model saved (val_loss: 661.4398)
+2026-04-17T19:44:02Z | INFO     |      nn.trainer | Epoch 14/27
+2026-04-17T19:52:14Z | INFO     |      nn.trainer | Train Loss: 1071.4703 | Val Loss: 1120.0393
+2026-04-17T19:52:14Z | INFO     |      nn.trainer | Epoch 15/27
+2026-04-17T20:00:25Z | INFO     |      nn.trainer | Train Loss: 906.3818 | Val Loss: 509.7361
+2026-04-17T20:00:25Z | INFO     |      nn.trainer | Best model saved (val_loss: 509.7361)
+2026-04-17T20:00:25Z | INFO     |      nn.trainer | Epoch 16/27
+2026-04-17T20:08:36Z | INFO     |      nn.trainer | Train Loss: 882.9949 | Val Loss: 828.5547
+2026-04-17T20:08:36Z | INFO     |      nn.trainer | Epoch 17/27
+2026-04-17T20:16:47Z | INFO     |      nn.trainer | Train Loss: 913.0510 | Val Loss: 1361.2755
+2026-04-17T20:16:47Z | INFO     |      nn.trainer | Epoch 18/27
+2026-04-17T20:24:58Z | INFO     |      nn.trainer | Train Loss: 755.2507 | Val Loss: 546.2917
+2026-04-17T20:24:58Z | INFO     |      nn.trainer | Epoch 19/27
+2026-04-17T20:33:10Z | INFO     |      nn.trainer | Train Loss: 729.0466 | Val Loss: 488.1613
+2026-04-17T20:33:10Z | INFO     |      nn.trainer | Best model saved (val_loss: 488.1613)
+2026-04-17T20:33:10Z | INFO     |      nn.trainer | Epoch 20/27
+2026-04-17T20:41:21Z | INFO     |      nn.trainer | Train Loss: 709.1552 | Val Loss: 550.2049
+2026-04-17T20:41:21Z | INFO     |      nn.trainer | Epoch 21/27
+2026-04-17T20:49:33Z | INFO     |      nn.trainer | Train Loss: 644.7819 | Val Loss: 421.7167
+2026-04-17T20:49:33Z | INFO     |      nn.trainer | Best model saved (val_loss: 421.7167)
+2026-04-17T20:49:33Z | INFO     |      nn.trainer | Epoch 22/27
+2026-04-17T20:57:44Z | INFO     |      nn.trainer | Train Loss: 613.9774 | Val Loss: 414.2802
+2026-04-17T20:57:44Z | INFO     |      nn.trainer | Best model saved (val_loss: 414.2802)
+2026-04-17T20:57:44Z | INFO     |      nn.trainer | Epoch 23/27
+2026-04-17T21:05:56Z | INFO     |      nn.trainer | Train Loss: 608.3218 | Val Loss: 379.2517
+2026-04-17T21:05:56Z | INFO     |      nn.trainer | Best model saved (val_loss: 379.2517)
+2026-04-17T21:05:56Z | INFO     |      nn.trainer | Epoch 24/27
+2026-04-17T21:14:07Z | INFO     |      nn.trainer | Train Loss: 602.2513 | Val Loss: 415.0261
+2026-04-17T21:14:07Z | INFO     |      nn.trainer | Epoch 25/27
+2026-04-17T21:22:18Z | INFO     |      nn.trainer | Train Loss: 542.4970 | Val Loss: 776.9462
+2026-04-17T21:22:18Z | INFO     |      nn.trainer | Epoch 26/27
+2026-04-17T21:30:30Z | INFO     |      nn.trainer | Train Loss: 529.3032 | Val Loss: 2342.2091
+2026-04-17T21:30:30Z | INFO     |      nn.trainer | Epoch 27/27
+2026-04-17T21:38:41Z | INFO     |      nn.trainer | Train Loss: 491.5299 | Val Loss: 399.2625
+2026-04-17T21:38:41Z | INFO     |      nn.trainer | Training complete. Time elapsed: 221.1 min
+2026-04-17T21:38:41Z | INFO     |      nn.trainer | Peak GPU Memory: 15308.87 MB
+2026-04-17T21:38:41Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:38:41Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Testing
+2026-04-17T21:38:41Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:38:41Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_gap_2026-04-17_19-57.pth
+2026-04-17T21:39:18Z | INFO     | evaluation.evaluator | Test Results:
+2026-04-17T21:39:18Z | INFO     | evaluation.evaluator |   MSE Loss: 347.5263
+2026-04-17T21:39:18Z | INFO     | evaluation.evaluator |   RMSE: 18.6421 W/m²
+2026-04-17T21:39:18Z | INFO     | evaluation.evaluator |   MAE: 11.3993 W/m²
+2026-04-17T21:39:18Z | INFO     | evaluation.evaluator |   R² Score: 0.9953
+2026-04-17T21:39:18Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:18Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Generating plots
+2026-04-17T21:39:18Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:18Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_3to1/2026-04-17_19-57/training_curves.png
+2026-04-17T21:39:18Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_3to1/2026-04-17_19-57/predictions_vs_actual.png
+2026-04-17T21:39:19Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_3to1/2026-04-17_19-57/error_distribution.png
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Creating report
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/results/rubsheet_3to1/2026-04-17_19-57/training_report_2026-04-17_23-39.md
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Training Complete
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_3to1.main_rubsheet_3to1 | Model saved: /home/xtsimbota_135764/masters/models/rubsheet_3to1_model_gap_2026-04-17_19-57.pth
+2026-04-17T21:39:19Z | INFO     |        __main__ | Experiment 1 (Rubsheet 3-to-1): completed successfully
+2026-04-17T21:39:19Z | INFO     |        __main__ | GPU memory released after Rubsheet 3-to-1
+2026-04-17T21:39:19Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     |        __main__ | Experiment 2: Rubsheet Square
+2026-04-17T21:39:19Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Rubsheet Square Experiment [Custom CNN]
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Loading dataset
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Train batches: 1600
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Val batches: 178
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Test batches: 289
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Exploratory Data Analysis
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | DataFrame Info:
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | Total samples: 33067
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | Irradiance statistics (IrradianceToPredict):
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | 
+count    33067.000000
+mean       282.737908
+std        279.615135
+min          0.000000
+25%         52.460000
+50%        172.790000
+75%        458.605000
+max       1440.550000
+Name: IrradianceToPredict, dtype: float64
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | Missing values: 0
+2026-04-17T21:39:19Z | INFO     |    eda.analysis | Zero values: 5
+2026-04-17T21:39:19Z | INFO     |       eda.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_square/2026-04-17_23-39/irradiance_distribution.png
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Creating model
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Total parameters: 1,207,201
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Trainable parameters: 1,207,201
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Training
+2026-04-17T21:39:19Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T21:39:19Z | INFO     |      nn.trainer | Starting training for 27 epochs
+2026-04-17T21:39:19Z | INFO     |      nn.trainer | Epoch 1/27
+2026-04-17T21:41:59Z | INFO     |      nn.trainer | Train Loss: 45660.2266 | Val Loss: 4446.4866
+2026-04-17T21:41:59Z | INFO     |      nn.trainer | Best model saved (val_loss: 4446.4866)
+2026-04-17T21:41:59Z | INFO     |      nn.trainer | Epoch 2/27
+2026-04-17T21:44:38Z | INFO     |      nn.trainer | Train Loss: 4073.7629 | Val Loss: 4630.9005
+2026-04-17T21:44:38Z | INFO     |      nn.trainer | Epoch 3/27
+2026-04-17T21:47:17Z | INFO     |      nn.trainer | Train Loss: 2847.4250 | Val Loss: 1531.9452
+2026-04-17T21:47:17Z | INFO     |      nn.trainer | Best model saved (val_loss: 1531.9452)
+2026-04-17T21:47:17Z | INFO     |      nn.trainer | Epoch 4/27
+2026-04-17T21:49:56Z | INFO     |      nn.trainer | Train Loss: 2234.0949 | Val Loss: 2412.1035
+2026-04-17T21:49:56Z | INFO     |      nn.trainer | Epoch 5/27
+2026-04-17T21:52:35Z | INFO     |      nn.trainer | Train Loss: 2014.1190 | Val Loss: 955.8165
+2026-04-17T21:52:35Z | INFO     |      nn.trainer | Best model saved (val_loss: 955.8165)
+2026-04-17T21:52:35Z | INFO     |      nn.trainer | Epoch 6/27
+2026-04-17T21:55:15Z | INFO     |      nn.trainer | Train Loss: 1663.2010 | Val Loss: 1568.4616
+2026-04-17T21:55:15Z | INFO     |      nn.trainer | Epoch 7/27
+2026-04-17T21:57:54Z | INFO     |      nn.trainer | Train Loss: 1461.3713 | Val Loss: 780.1162
+2026-04-17T21:57:54Z | INFO     |      nn.trainer | Best model saved (val_loss: 780.1162)
+2026-04-17T21:57:54Z | INFO     |      nn.trainer | Epoch 8/27
+2026-04-17T22:00:33Z | INFO     |      nn.trainer | Train Loss: 1300.4983 | Val Loss: 851.3631
+2026-04-17T22:00:33Z | INFO     |      nn.trainer | Epoch 9/27
+2026-04-17T22:03:12Z | INFO     |      nn.trainer | Train Loss: 1259.5354 | Val Loss: 787.5090
+2026-04-17T22:03:12Z | INFO     |      nn.trainer | Epoch 10/27
+2026-04-17T22:05:51Z | INFO     |      nn.trainer | Train Loss: 1125.5174 | Val Loss: 1607.0390
+2026-04-17T22:05:51Z | INFO     |      nn.trainer | Epoch 11/27
+2026-04-17T22:08:30Z | INFO     |      nn.trainer | Train Loss: 1041.5202 | Val Loss: 549.0501
+2026-04-17T22:08:30Z | INFO     |      nn.trainer | Best model saved (val_loss: 549.0501)
+2026-04-17T22:08:30Z | INFO     |      nn.trainer | Epoch 12/27
+2026-04-17T22:11:09Z | INFO     |      nn.trainer | Train Loss: 937.5377 | Val Loss: 1712.0807
+2026-04-17T22:11:09Z | INFO     |      nn.trainer | Epoch 13/27
+2026-04-17T22:13:49Z | INFO     |      nn.trainer | Train Loss: 843.1788 | Val Loss: 1782.4187
+2026-04-17T22:13:49Z | INFO     |      nn.trainer | Epoch 14/27
+2026-04-17T22:16:28Z | INFO     |      nn.trainer | Train Loss: 760.5257 | Val Loss: 1134.5229
+2026-04-17T22:16:28Z | INFO     |      nn.trainer | Epoch 15/27
+2026-04-17T22:19:07Z | INFO     |      nn.trainer | Train Loss: 659.6767 | Val Loss: 459.1701
+2026-04-17T22:19:07Z | INFO     |      nn.trainer | Best model saved (val_loss: 459.1701)
+2026-04-17T22:19:07Z | INFO     |      nn.trainer | Epoch 16/27
+2026-04-17T22:21:46Z | INFO     |      nn.trainer | Train Loss: 643.8890 | Val Loss: 483.5813
+2026-04-17T22:21:46Z | INFO     |      nn.trainer | Epoch 17/27
+2026-04-17T22:24:25Z | INFO     |      nn.trainer | Train Loss: 623.5248 | Val Loss: 768.3868
+2026-04-17T22:24:25Z | INFO     |      nn.trainer | Epoch 18/27
+2026-04-17T22:27:04Z | INFO     |      nn.trainer | Train Loss: 546.7213 | Val Loss: 358.1913
+2026-04-17T22:27:04Z | INFO     |      nn.trainer | Best model saved (val_loss: 358.1913)
+2026-04-17T22:27:04Z | INFO     |      nn.trainer | Epoch 19/27
+2026-04-17T22:29:44Z | INFO     |      nn.trainer | Train Loss: 495.6060 | Val Loss: 336.8121
+2026-04-17T22:29:44Z | INFO     |      nn.trainer | Best model saved (val_loss: 336.8121)
+2026-04-17T22:29:44Z | INFO     |      nn.trainer | Epoch 20/27
+2026-04-17T22:32:23Z | INFO     |      nn.trainer | Train Loss: 473.4424 | Val Loss: 385.7835
+2026-04-17T22:32:23Z | INFO     |      nn.trainer | Epoch 21/27
+2026-04-17T22:35:02Z | INFO     |      nn.trainer | Train Loss: 469.1842 | Val Loss: 651.9707
+2026-04-17T22:35:02Z | INFO     |      nn.trainer | Epoch 22/27
+2026-04-17T22:37:42Z | INFO     |      nn.trainer | Train Loss: 410.8757 | Val Loss: 437.7089
+2026-04-17T22:37:42Z | INFO     |      nn.trainer | Epoch 23/27
+2026-04-17T22:40:21Z | INFO     |      nn.trainer | Train Loss: 378.4824 | Val Loss: 331.5906
+2026-04-17T22:40:21Z | INFO     |      nn.trainer | Best model saved (val_loss: 331.5906)
+2026-04-17T22:40:21Z | INFO     |      nn.trainer | Epoch 24/27
+2026-04-17T22:43:00Z | INFO     |      nn.trainer | Train Loss: 380.7769 | Val Loss: 779.7514
+2026-04-17T22:43:00Z | INFO     |      nn.trainer | Epoch 25/27
+2026-04-17T22:45:39Z | INFO     |      nn.trainer | Train Loss: 343.1755 | Val Loss: 528.4483
+2026-04-17T22:45:39Z | INFO     |      nn.trainer | Epoch 26/27
+2026-04-17T22:48:18Z | INFO     |      nn.trainer | Train Loss: 328.2533 | Val Loss: 296.9574
+2026-04-17T22:48:18Z | INFO     |      nn.trainer | Best model saved (val_loss: 296.9574)
+2026-04-17T22:48:18Z | INFO     |      nn.trainer | Epoch 27/27
+2026-04-17T22:50:57Z | INFO     |      nn.trainer | Train Loss: 337.3431 | Val Loss: 262.3138
+2026-04-17T22:50:57Z | INFO     |      nn.trainer | Best model saved (val_loss: 262.3138)
+2026-04-17T22:50:57Z | INFO     |      nn.trainer | Training complete. Time elapsed: 71.6 min
+2026-04-17T22:50:57Z | INFO     |      nn.trainer | Peak GPU Memory: 5119.57 MB
+2026-04-17T22:50:57Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:50:57Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Testing
+2026-04-17T22:50:57Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:50:57Z | INFO     | evaluation.evaluator | Loaded model from /home/xtsimbota_135764/masters/models/rubsheet_square_model_gap_2026-04-17_23-39.pth
+2026-04-17T22:51:09Z | INFO     | evaluation.evaluator | Test Results:
+2026-04-17T22:51:09Z | INFO     | evaluation.evaluator |   MSE Loss: 227.9706
+2026-04-17T22:51:09Z | INFO     | evaluation.evaluator |   RMSE: 15.0987 W/m²
+2026-04-17T22:51:09Z | INFO     | evaluation.evaluator |   MAE: 9.0492 W/m²
+2026-04-17T22:51:09Z | INFO     | evaluation.evaluator |   R² Score: 0.9969
+2026-04-17T22:51:09Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:09Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Generating plots
+2026-04-17T22:51:09Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:09Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_square/2026-04-17_23-39/training_curves.png
+2026-04-17T22:51:09Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_square/2026-04-17_23-39/predictions_vs_actual.png
+2026-04-17T22:51:10Z | INFO     |     utils.plots | Saved: /home/xtsimbota_135764/masters/results/rubsheet_square/2026-04-17_23-39/error_distribution.png
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Creating report
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     |  utils.reporter | Saved: /home/xtsimbota_135764/masters/results/rubsheet_square/2026-04-17_23-39/training_report_2026-04-18_00-51.md
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Training Complete
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     | experiments.rubsheet_square.main_rubsheet_square | Model saved: /home/xtsimbota_135764/masters/models/rubsheet_square_model_gap_2026-04-17_23-39.pth
+2026-04-17T22:51:10Z | INFO     |        __main__ | Experiment 2 (Rubsheet Square): completed successfully
+2026-04-17T22:51:10Z | INFO     |        __main__ | GPU memory released after Rubsheet Square
+2026-04-17T22:51:10Z | INFO     |        __main__ | 
+2026-04-17T22:51:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     |        __main__ | main Summary
+2026-04-17T22:51:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
+2026-04-17T22:51:10Z | INFO     |        __main__ | Fisheye                  : SUCCESS
+2026-04-17T22:51:10Z | INFO     |        __main__ | Rubsheet 3-to-1          : SUCCESS
+2026-04-17T22:51:10Z | INFO     |        __main__ | Rubsheet Square          : SUCCESS
+2026-04-17T22:51:10Z | INFO     |        __main__ | --------------------------------------------------------------------------------
