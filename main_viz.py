@@ -73,13 +73,13 @@ EXPERIMENTS = {
         ),
         "experiment_name": "Fisheye",
         "ig_grid": [
+            {"n_steps": 15},
             {"n_steps": 20},
             {"n_steps": 40},
             {"n_steps": 80},
-            {"n_steps": 120},
         ],
-        "occlusion_patch_sizes": [30],
-        "occlusion_strides":     [13],
+        "occlusion_patch_sizes": [15, 25],
+        "occlusion_strides":     [12, 15],
     },
     "rubsheet_3to1": {
         "config_path": os.path.join(
@@ -87,17 +87,31 @@ EXPERIMENTS = {
         ),
         "experiment_name": "Rubsheet 3-to-1",
         "ig_grid": [
+            {"n_steps": 15},
             {"n_steps": 20},
             {"n_steps": 40},
             {"n_steps": 80},
-            {"n_steps": 120},
         ],
-        "occlusion_patch_sizes": [30],
-        "occlusion_strides":     [13],
+        "occlusion_patch_sizes": [15, 25],
+        "occlusion_strides":     [12, 15],
+    },
+    "rubsheet_square": {
+        "config_path": os.path.join(
+            PROJECT_ROOT, "experiments", "rubsheet_square", "config_rubsheet_square.py"
+        ),
+        "experiment_name": "Rubsheet Square",
+        "ig_grid": [
+            {"n_steps": 15},
+            {"n_steps": 20},
+            {"n_steps": 40},
+            {"n_steps": 80},
+        ],
+        "occlusion_patch_sizes": [15, 25],
+        "occlusion_strides":     [12, 15],
     },
 }
 
-OUTPUT_BASE = os.path.join(PROJECT_ROOT, "analysis", "viz_gridsearch")
+OUTPUT_BASE = os.path.join(PROJECT_ROOT, "visualization", "gap")
 
 GROUP_TITLES = {
     "low":    "Low Irradiance",
