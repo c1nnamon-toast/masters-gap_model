@@ -1,7 +1,7 @@
-"""Grid search over IG and Occlusion visualization hyperparameters.
+"""Grid search over IG, Occlusion, and Grad-CAM visualization hyperparameters.
 
-Runs Integrated Gradients and Occlusion attribution analysis across a small
-grid of hyperparameters for two experiments: Fisheye and Rubsheet 3-to-1.
+Runs Integrated Gradients, Occlusion, and Grad-CAM attribution analysis
+across a small grid of hyperparameters for each configured experiment.
 
 Data and model are loaded once per experiment; only the attribution step is
 repeated for each hyperparameter combination.  GPU memory is freed after
@@ -9,15 +9,19 @@ every trial.  Any trial that raises an exception is logged and skipped.
 
 Output structure
 ----------------
-    analysis/viz_gridsearch/
+    visualization/gap/
         fisheye/
             summary.csv
-            ig_nsteps15/   ... ig_nsteps40/
-            occ_p20_s10/   ... occ_p50_s25/   (patch x stride cross-product)
+            ig_nsteps15/   ... ig_nsteps80/
+            occ_p15_s12/   ... occ_p25_s15/
+            gradcam_conv_block4/
         rubsheet_3to1/
             summary.csv
-            ig_nsteps15/   ... ig_nsteps400/
-            occ_p20_s10/   ... occ_p50_s25/   (patch x stride cross-product)
+            ig_nsteps15/   ... ig_nsteps80/
+            occ_p15_s12/   ... occ_p25_s15/
+            gradcam_conv_block4/
+        rubsheet_square/
+            ...
         gridsearch_results.md
 
 Run
@@ -40,12 +44,13 @@ import matplotlib
 matplotlib.use("Agg")
 
 import torch
+import torch.nn.functional as F
 import numpy as np
 
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, PROJECT_ROOT)
 
-from captum.attr import IntegratedGradients, Occlusion
+from captum.attr import IntegratedGradients, Occlusion, LayerGradCam
 
 from nn.model import SkyCNN
 from nn.loader import get_dataloaders
@@ -80,6 +85,9 @@ EXPERIMENTS = {
         ],
         "occlusion_patch_sizes": [15, 25],
         "occlusion_strides":     [12, 15],
+        "gradcam_grid": [
+            {"layer_name": "conv_block4"},
+        ],
     },
     "rubsheet_3to1": {
         "config_path": os.path.join(
@@ -94,6 +102,9 @@ EXPERIMENTS = {
         ],
         "occlusion_patch_sizes": [15, 25],
         "occlusion_strides":     [12, 15],
+        "gradcam_grid": [
+            {"layer_name": "conv_block4"},
+        ],
     },
     "rubsheet_square": {
         "config_path": os.path.join(
@@ -108,6 +119,9 @@ EXPERIMENTS = {
         ],
         "occlusion_patch_sizes": [15, 25],
         "occlusion_strides":     [12, 15],
+        "gradcam_grid": [
+            {"layer_name": "conv_block4"},
+        ],
     },
 }
 
@@ -136,16 +150,17 @@ def load_config(config_path):
 
 
 def find_latest_model(base_path):
-    """Return the most recent timestamped .pth checkpoint."""
+    """Return the most recent timestamped .pth checkpoint (gap models only)."""
     model_dir = os.path.dirname(base_path)
     base_name = os.path.basename(base_path).replace(".pth", "")
     pattern = os.path.join(model_dir, f"{base_name}_*.pth")
     model_files = glob.glob(pattern)
+    model_files = [f for f in model_files if "gap" in os.path.basename(f)]
 
     if not model_files:
         if os.path.exists(base_path):
             return base_path
-        raise FileNotFoundError(f"No model files found matching {pattern}")
+        raise FileNotFoundError(f"No gap model files found matching {pattern}")
 
     def _ts(path):
         m = re.search(r"(\d{4}-\d{2}-\d{2}_\d{2}-\d{2})\.pth$", path)
@@ -161,6 +176,23 @@ def cleanup_gpu():
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
         torch.cuda.reset_peak_memory_stats()
+
+
+def resolve_layer(model, layer_name):
+    """Resolve a dot-separated layer name to the corresponding nn.Module.
+
+    Examples
+    --------
+    >>> resolve_layer(model, "conv_block4")        # -> model.conv_block4
+    >>> resolve_layer(model, "conv_block4.3")       # -> model.conv_block4[3]
+    """
+    module = model
+    for part in layer_name.split("."):
+        if part.isdigit():
+            module = module[int(part)]
+        else:
+            module = getattr(module, part)
+    return module
 
 
 # ---------------------------------------------------------------------------
@@ -213,6 +245,49 @@ def make_occlusion_attr_fn(occ, device, patch_size, stride, baseline_value=0.0):
         if amax > 0:
             attr_map /= amax
         return attr_map
+
+    return attr_fn
+
+
+def make_gradcam_attr_fn(gradcam, device):
+    """Return a callable: img_tensor (1,C,H,W) -> attr_map (H,W) in [0,1].
+
+    Grad-CAM produces a coarse heatmap at the spatial resolution of the
+    target convolutional layer.  This function upsamples it back to the
+    input resolution via bilinear interpolation and normalises to [0, 1].
+    ``relu_attributions=True`` is used so that only positively-contributing
+    regions are shown — standard practice for Grad-CAM.
+    """
+
+    def attr_fn(img_tensor):
+        inp = img_tensor.to(device)
+        input_h, input_w = inp.shape[2], inp.shape[3]
+
+        attributions = gradcam.attribute(
+            inp, target=0, relu_attributions=True
+        )
+        # attributions shape: (1, C_layer, H_layer, W_layer)
+        # Sum across channel dimension to get a single spatial map
+        attr_map = attributions.sum(dim=1, keepdim=True)  # (1, 1, H_l, W_l)
+
+        # Upsample to input resolution
+        attr_map = F.interpolate(
+            attr_map,
+            size=(input_h, input_w),
+            mode="bilinear",
+            align_corners=False,
+        )
+
+        attr_np = attr_map.detach().cpu().numpy()[0, 0]  # (H, W)
+
+        del attributions, inp, attr_map
+        torch.cuda.empty_cache()
+
+        # Normalise to [0, 1]
+        amax = attr_np.max()
+        if amax > 0:
+            attr_np /= amax
+        return attr_np
 
     return attr_fn
 
@@ -307,6 +382,36 @@ def run_occlusion_trial(
     del occ, attr_fn
 
 
+def run_gradcam_trial(
+    model, groups, config, output_dir, experiment_name, layer_name
+):
+    """Run one Grad-CAM trial and save all group grids.
+
+    Grad-CAM targets a specific convolutional layer and produces a coarse
+    heatmap that is upsampled to input resolution.  In the regression
+    setting the resulting maps tend to be diffuse — this is expected and
+    documented in the thesis (Section 2.4 / Section 3.6).
+    """
+    layer = resolve_layer(model, layer_name)
+    gradcam = LayerGradCam(model, layer)
+    attr_fn = make_gradcam_attr_fn(gradcam, config.DEVICE)
+
+    for group_name, cases in groups.items():
+        save_path = os.path.join(output_dir, f"{group_name}_gradcam.png")
+        plot_attribution_grid(
+            cases=cases,
+            attr_fn=attr_fn,
+            title_prefix=GROUP_TITLES[group_name],
+            method_name=f"Grad-CAM (layer={layer_name})",
+            experiment_name=experiment_name,
+            save_path=save_path,
+            normalize_mean=config.NORMALIZE_MEAN,
+            normalize_std=config.NORMALIZE_STD,
+        )
+
+    del gradcam, attr_fn
+
+
 # ---------------------------------------------------------------------------
 # Markdown report
 # ---------------------------------------------------------------------------
@@ -368,7 +473,10 @@ def generate_summary_md(run_log, total_time, output_path):
         "|-----------|----------------|",
     ]
     for spec in EXPERIMENTS.values():
-        steps = ", ".join(str(p["n_steps"]) for p in spec["ig_grid"])
+        if "ig_grid" in spec and spec["ig_grid"]:
+            steps = ", ".join(str(p["n_steps"]) for p in spec["ig_grid"])
+        else:
+            steps = "-"
         lines.append(f"| {spec['experiment_name']} | {steps} |")
     lines += [
         "",
@@ -378,18 +486,39 @@ def generate_summary_md(run_log, total_time, output_path):
         "|-----------|-------------|---------|--------------------------|",
     ]
     for spec in EXPERIMENTS.values():
-        if "occlusion_patch_sizes" in spec and "occlusion_strides" in spec and spec["occlusion_patch_sizes"] and spec["occlusion_strides"]:
+        if (
+            "occlusion_patch_sizes" in spec
+            and "occlusion_strides" in spec
+            and spec["occlusion_patch_sizes"]
+            and spec["occlusion_strides"]
+        ):
             patches = ", ".join(str(p) for p in spec["occlusion_patch_sizes"])
             strides = ", ".join(str(s) for s in spec["occlusion_strides"])
             n_combos = sum(
-                1 for p in spec["occlusion_patch_sizes"]
-                for s in spec["occlusion_strides"] if s <= p
+                1
+                for p in spec["occlusion_patch_sizes"]
+                for s in spec["occlusion_strides"]
+                if s <= p
             )
             lines.append(
                 f"| {spec['experiment_name']} | {patches} | {strides} | {n_combos} |"
             )
         else:
             lines.append(f"| {spec['experiment_name']} | - | - | - |")
+
+    lines += [
+        "",
+        "### Grad-CAM",
+        "",
+        "| Experiment | target layers |",
+        "|-----------|---------------|",
+    ]
+    for spec in EXPERIMENTS.values():
+        if "gradcam_grid" in spec and spec["gradcam_grid"]:
+            layers = ", ".join(p["layer_name"] for p in spec["gradcam_grid"])
+        else:
+            layers = "-"
+        lines.append(f"| {spec['experiment_name']} | {layers} |")
     lines.append("")
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -411,7 +540,7 @@ def main():
         sys.exit(1)
 
     logger.info("=" * 80)
-    logger.info("  Visualization Grid Search — IG & Occlusion")
+    logger.info("  Visualization Grid Search — IG & Occlusion & Grad-CAM")
     logger.info("=" * 80)
 
     os.makedirs(OUTPUT_BASE, exist_ok=True)
@@ -449,10 +578,35 @@ def main():
         # -- Load model (once per experiment) --
         model_path = find_latest_model(config.MODEL_SAVE_PATH)
         logger.info(f"Model: {model_path}")
-        model = SkyCNN().to(device)
-        model.load_state_dict(
-            torch.load(model_path, map_location=device, weights_only=True)
-        )
+        try:
+            model = SkyCNN().to(device)
+            model.load_state_dict(
+                torch.load(model_path, map_location=device, weights_only=True)
+            )
+        except RuntimeError as _oom:
+            if "out of memory" in str(_oom).lower():
+                logger.warning("CUDA OOM loading model — falling back to CPU.")
+                torch.cuda.empty_cache()
+                device = torch.device("cpu")
+                _, _, test_loader, _ = get_dataloaders(
+                    train_csv=config.TRAIN_CSV,
+                    val_csv=config.VAL_CSV,
+                    test_csv=config.TEST_CSV,
+                    train_image_dir=config.TRAIN_IMAGE_DIR,
+                    val_image_dir=config.VAL_IMAGE_DIR,
+                    test_image_dir=config.TEST_IMAGE_DIR,
+                    batch_size=config.BATCH_SIZE,
+                    num_workers=config.NUM_WORKERS,
+                    pin_memory=False,
+                    normalize_mean=config.NORMALIZE_MEAN,
+                    normalize_std=config.NORMALIZE_STD,
+                )
+                model = SkyCNN().to(device)
+                model.load_state_dict(
+                    torch.load(model_path, map_location=device, weights_only=True)
+                )
+            else:
+                raise
         model.eval()
 
         # -- Collect predictions & pick groups (once per experiment) --
@@ -463,8 +617,7 @@ def main():
         os.makedirs(exp_output, exist_ok=True)
         save_summary_csv(results, os.path.join(exp_output, "summary.csv"))
 
-
-        # ── IG trials (only if ig_grid present) ────────────────────────────
+        # ── IG trials ──────────────────────────────────────────────────────
         if "ig_grid" in exp_spec and exp_spec["ig_grid"]:
             for ig_params in exp_spec["ig_grid"]:
                 n_steps = ig_params["n_steps"]
@@ -502,10 +655,12 @@ def main():
                 finally:
                     cleanup_gpu()
 
-        # ── Occlusion trials (only if occlusion keys present) ──────────────
+        # ── Occlusion trials ───────────────────────────────────────────────
         if (
-            "occlusion_patch_sizes" in exp_spec and exp_spec["occlusion_patch_sizes"]
-            and "occlusion_strides" in exp_spec and exp_spec["occlusion_strides"]
+            "occlusion_patch_sizes" in exp_spec
+            and exp_spec["occlusion_patch_sizes"]
+            and "occlusion_strides" in exp_spec
+            and exp_spec["occlusion_strides"]
         ):
             for ps in exp_spec["occlusion_patch_sizes"]:
                 for st in exp_spec["occlusion_strides"]:
@@ -547,6 +702,45 @@ def main():
                         logger.error(f"       FAILED  ({elapsed:.1f} s): {exc}")
                     finally:
                         cleanup_gpu()
+
+        # ── Grad-CAM trials ────────────────────────────────────────────────
+        if "gradcam_grid" in exp_spec and exp_spec["gradcam_grid"]:
+            for gc_params in exp_spec["gradcam_grid"]:
+                layer_name = gc_params["layer_name"]
+                tag = f"gradcam_{layer_name.replace('.', '_')}"
+                trial_dir = os.path.join(exp_output, tag)
+                os.makedirs(trial_dir, exist_ok=True)
+                params_str = f"layer={layer_name}"
+
+                logger.info(f"  [GradCAM] {params_str}")
+                t0 = time.time()
+                try:
+                    run_gradcam_trial(
+                        model, groups, config, trial_dir, exp_name,
+                        layer_name,
+                    )
+                    elapsed = time.time() - t0
+                    run_log.append(dict(
+                        experiment=exp_name, method="Grad-CAM",
+                        params=params_str, status="SUCCESS",
+                        time=elapsed,
+                        output_dir=os.path.relpath(trial_dir, PROJECT_ROOT),
+                        error="",
+                    ))
+                    logger.info(f"       OK  ({elapsed:.1f} s)")
+                except Exception as exc:
+                    elapsed = time.time() - t0
+                    tb = traceback.format_exc()
+                    run_log.append(dict(
+                        experiment=exp_name, method="Grad-CAM",
+                        params=params_str, status="FAILED",
+                        time=elapsed,
+                        output_dir=os.path.relpath(trial_dir, PROJECT_ROOT),
+                        error=tb,
+                    ))
+                    logger.error(f"       FAILED  ({elapsed:.1f} s): {exc}")
+                finally:
+                    cleanup_gpu()
 
         # -- Release experiment-level resources --
         del model, results, groups, test_loader
